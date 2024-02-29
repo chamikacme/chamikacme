@@ -1,3 +1,6 @@
+![Banner image](assets/banner.png)
+
+
 <h1 align="center">Hi 👋, I'm Chamika Edirisinghe</h1>
 <h3 align="center">A passionate full stack software engineer</h3>
 
