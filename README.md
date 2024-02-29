@@ -1,4 +1,4 @@
-![Banner image](assets/banner.png)
+![Banner image](assets/banner.webp)
 
 
 <h1 align="center">Hi 👋, I'm Chamika Edirisinghe</h1>
