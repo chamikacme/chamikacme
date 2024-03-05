@@ -10,7 +10,7 @@
 
 - 🌱 I’m currently learning **cloud computing**
 
-- 👨‍💻 Get to know more about me at [chamika.live](chamika.live)
+- 👨‍💻 Get to know more about me at [chamika.live](https://chamika.live)
 
 - 📫 How to reach me **chamikacme@gmail.com**
 
