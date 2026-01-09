@@ -16,7 +16,7 @@ export const Experience = () => {
           transition={{ duration: 0.6 }}
           className="mb-16"
         >
-          <h2 className="text-3xl md:text-5xl font-bold text-white mb-12">
+          <h2 className="text-3xl md:text-5xl font-bold font-heading text-white mb-12">
             Work <span className="text-blue-500">Experience</span>
           </h2>
           

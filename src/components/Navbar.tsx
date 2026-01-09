@@ -31,25 +31,25 @@ export const Navbar = () => {
       className={cn(
         "fixed top-0 w-full z-50 transition-all duration-300",
         scrolled
-          ? "bg-black/50 backdrop-blur-md border-b border-white/10 py-4"
+          ? "bg-black/80 backdrop-blur-xl border-b border-white/5 py-4"
           : "bg-transparent py-6"
       )}
     >
       <div className="container mx-auto px-6 flex justify-between items-center">
-        <Link href="/" className="text-2xl font-bold tracking-tighter text-white">
-          Chamika<span className="text-blue-500">.</span>
+        <Link href="/" className="text-xl font-black font-sans tracking-tight text-white flex items-center gap-1 uppercase">
+          <div className="w-8 h-8 bg-blue-600 rounded-lg flex items-center justify-center text-white font-bold text-lg">C</div>
+          HAMIKA
         </Link>
 
         {/* Desktop Menu */}
-        <div className="hidden md:flex items-center space-x-8">
+        <div className="hidden md:flex items-center space-x-10">
           {navLinks.map((link) => (
             <Link
               key={link.name}
               href={link.href}
-              className="text-sm font-medium text-gray-300 hover:text-white transition-colors relative group"
+              className="text-xs font-bold uppercase text-gray-500 hover:text-white transition-colors tracking-widest"
             >
               {link.name}
-              <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-blue-500 transition-all duration-300 group-hover:w-full" />
             </Link>
           ))}
         </div>

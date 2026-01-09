@@ -17,7 +17,7 @@ export const Contact = () => {
            className="grid md:grid-cols-2 gap-12 lg:gap-24"
         >
           <div>
-            <h2 className="text-3xl md:text-5xl font-bold text-white mb-6">
+            <h2 className="text-3xl md:text-5xl font-bold font-heading text-white mb-6">
               Let's <span className="text-blue-500">Connect</span>
             </h2>
             <p className="text-gray-400 text-lg mb-12">

@@ -9,59 +9,62 @@ export const Hero = () => {
   return (
     <section
       id="home"
-      className="relative h-screen flex items-center justify-center overflow-hidden bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-blue-900/20 via-black to-black"
+      className="relative min-h-screen flex items-center justify-center overflow-hidden bg-[#050505] selection:bg-blue-500/30 pt-20"
     >
-      {/* Background Elements */}
-      <div className="absolute inset-0 w-full h-full bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:24px_24px] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_0%,#000_70%,transparent_100%)] pointer-events-none" />
+      {/* Dynamic Background */}
+      <div className="absolute inset-0 w-full h-full bg-[linear-gradient(to_right,#ffffff05_1px,transparent_1px),linear-gradient(to_bottom,#ffffff05_1px,transparent_1px)] bg-[size:24px_24px]" />
       
-      <div className="container mx-auto px-6 relative z-10 text-center">
+      {/* Central Glow */}
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-blue-600/10 rounded-full blur-[120px] pointer-events-none" />
+
+      <div className="container mx-auto px-6 relative z-20 text-center">
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
+          initial={{ opacity: 0, scale: 0.95 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 0.8, ease: "circOut" }}
         >
-          <span className="inline-block py-1 px-3 rounded-full bg-blue-500/10 border border-blue-500/20 text-blue-400 text-sm font-medium mb-6">
-            Hello, World!
-          </span>
-          <h1 className="text-5xl md:text-7xl font-bold tracking-tight text-white mb-6">
-            I'm <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-600">{portfolioData.personalInfo.name}</span>
+          <motion.div 
+            initial={{ opacity: 0, y: 10 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.2 }}
+            className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-500/10 border border-blue-500/20 text-[10px] uppercase tracking-wider font-bold text-blue-400 mb-8 cursor-default"
+          >
+            <span className="w-1.5 h-1.5 rounded-full bg-blue-500 animate-pulse" />
+            Available for new projects
+          </motion.div>
+
+          <h1 className="text-4xl sm:text-7xl md:text-9xl font-black text-white mb-6 leading-[0.9] tracking-[-0.04em] uppercase">
+            Transforming<br />
+            Ideas into<br />
+            <span className="text-transparent bg-clip-text bg-gradient-to-b from-blue-400 to-purple-600">Digital Reality</span>
           </h1>
-          <h2 className="text-2xl md:text-3xl text-gray-400 mb-8 font-light">
-            {portfolioData.personalInfo.title}
-          </h2>
-          <p className="max-w-2xl mx-auto text-gray-500 text-lg mb-10 leading-relaxed">
-            {portfolioData.personalInfo.description}
+          
+          <p className="max-w-xl mx-auto text-gray-400 text-lg md:text-xl mb-10 leading-relaxed font-light">
+            Hi, I'm <strong className="text-white font-medium">Chamika Edirisinghe</strong>. A Full-Stack Software Engineer building scalable, high-performance applications with modern technologies.
           </p>
           
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-6">
             <motion.a
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
               href="#projects"
-              className="px-8 py-3 rounded-full bg-white text-black font-semibold hover:bg-gray-100 transition-colors"
+              className="px-8 py-3 rounded-full bg-blue-600 text-white font-bold text-sm uppercase tracking-wide hover:bg-blue-700 transition-all shadow-[0_0_20px_rgba(37,99,235,0.3)] hover:shadow-[0_0_30px_rgba(37,99,235,0.5)] flex items-center gap-2"
             >
-              View My Work
+              Explore Projects
+              <ArrowDown className="w-4 h-4 -rotate-90" />
             </motion.a>
             <motion.a
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
               href="#contact"
-              className="px-8 py-3 rounded-full bg-white/10 text-white font-semibold backdrop-blur-sm border border-white/10 hover:bg-white/20 transition-colors"
+              className="px-6 py-3 rounded-full text-white font-bold text-sm uppercase tracking-wide hover:text-blue-400 transition-colors flex items-center gap-2"
             >
-              Contact Me
+              Get In Touch
+              <ArrowDown className="w-4 h-4 -rotate-45" />
             </motion.a>
           </div>
         </motion.div>
       </div>
-
-      <motion.div
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ delay: 1, duration: 1 }}
-        className="absolute bottom-10 left-1/2 -translate-x-1/2"
-      >
-        <ArrowDown className="text-gray-500 animate-bounce" />
-      </motion.div>
     </section>
   );
 };
